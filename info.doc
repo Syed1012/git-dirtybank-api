@@ -1,0 +1,10 @@
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+Add above one in any service file -- 1.
+
+Can you unused method in the Userservice file --- 2.
+
+    // Unused method
+//    public User getUserByEmail(String email) {
+//        return userRepository.findByEmail(email).orElse(null);
+//    }

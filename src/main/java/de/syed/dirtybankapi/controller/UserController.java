@@ -2,6 +2,7 @@ package de.syed.dirtybankapi.controller;
 
 import de.syed.dirtybankapi.domain.User;
 import de.syed.dirtybankapi.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,13 +11,13 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     private final UserService userService;
 
-    // 2. unused constructor
+    @Autowired
     private UserController(UserService userService){
         this.userService = userService;
     }
 
     // Create a new user
-    @PostMapping
+    @PostMapping("/create-user")
     public ResponseEntity<User> createUser(@RequestParam String username,
                                            @RequestParam String fullName,
                                            @RequestParam String email,
