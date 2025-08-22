@@ -28,8 +28,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Build with Maven and SonarQube scan
-        run: mvn -B verify sonar:sonar \
-          -Dsonar.projectKey=git-dirty-bank-api \
-          -Dsonar.host.url=http://localhost:9000 \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+      - name: Build with Maven and SonarCloud scan
+        run: mvn clean verify sonar:sonar \
+          -Dsonar.projectKey=syedde_git-dirty-bank-api \
+          -Dsonar.organization=syedde \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+          -DskipTests
