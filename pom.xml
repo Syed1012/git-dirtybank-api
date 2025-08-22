@@ -22,7 +22,6 @@
         <sonar.projectKey>syedde_git-dirty-bank-api</sonar.projectKey>
         <sonar.organization>syedde</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <!-- Remove the hardcoded token from here - use GitHub secrets instead -->
     </properties>
 
     <dependencies>
