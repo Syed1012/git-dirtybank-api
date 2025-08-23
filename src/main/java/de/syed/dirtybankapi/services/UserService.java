@@ -26,8 +26,8 @@ public class UserService {
         return userRepository.findByUsername(username).orElse(null);
     }
 
-    // Unused method
-//    public User getUserByEmail(String email) {
-//        return userRepository.findByEmail(email).orElse(null);
-//    }
+
+    public User getUserByEmail(String email) {
+        return userRepository.findByEmail(email).orElse(null);
+    }
 }
